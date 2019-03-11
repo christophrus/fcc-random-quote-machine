@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import 'font-awesome/css/font-awesome.min.css';
+import { Helmet } from 'react-helmet';
 
 class App extends Component {
 
@@ -43,7 +44,9 @@ class App extends Component {
     }
   }
   
+
   render() {
+    let twitterUrl = "https://twitter.com/intent/tweet?text=" + escape( `"${this.state.currentQuote}"\n\t- ${this.state.currentAuthor}`);
     if (this.state.quotes.error) {
       return (
         <div id="error">An error occured.</div>
@@ -55,6 +58,9 @@ class App extends Component {
     }
     return (
       <main>
+        <Helmet>
+          <script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" />
+        </Helmet>
         <div id="quote-box">
           <div className="row">
             <div id="text">{this.state.currentQuote}</div>
@@ -63,8 +69,7 @@ class App extends Component {
             <div id="author">{this.state.currentAuthor}</div>
           </div>
           <div className="row">
-            <a href="|" className="left button"><i className="fa fa-twitter"></i></a>
-            <a href="|" className="left button"><i className="fa fa-facebook"></i></a>
+            <a id="tweet-quote" href={twitterUrl} className="left button"><i className="fa fa-twitter"></i></a>
             <button className="right" onClick={this.getRandomQuote} id="new-quote">New Quote</button>
           </div>
         </div>
