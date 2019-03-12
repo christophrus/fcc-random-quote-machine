@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/fcc-random-quote-machine/static/css/2.0d467170.chunk.css"
   },
   {
-    "revision": "524fa7821c6aa43b1de21cde5639d732",
+    "revision": "07c2cda3be3c13d60b9edbfe53a147f4",
     "url": "/fcc-random-quote-machine/index.html"
   }
 ];
