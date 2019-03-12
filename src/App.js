@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import 'font-awesome/css/font-awesome.min.css';
-import { Helmet } from 'react-helmet';
+import QuoteBox from './components/QuoteBox';
+import Button from './components/Button';
+import Quote from './components/Quote';
 
 class App extends Component {
 
@@ -10,7 +12,9 @@ class App extends Component {
     this.state = {
       currentQuote: '',
       currentAuthor: '',
-      quotes: {data: [], isLoaded: false, error: null}
+      currentColor: '',
+      quotes: {data: [], isLoaded: false, error: null},
+      colors: ['grey', 'red', 'orange', 'yellow', 'green', 'teal', 'blue', 'indigo', 'purple', 'pink']
     }
     this.getRandomQuote = this.getRandomQuote.bind(this);
   }
@@ -35,11 +39,12 @@ class App extends Component {
 
   getRandomQuote() {
     if (!this.state.quotes.error) {
-      let random = Math.floor( Math.random() * this.state.quotes.data.length );
-      console.log(random);
+      let randomQ = Math.floor( Math.random() * this.state.quotes.data.length );
+      let randomC = Math.floor( Math.random() * this.state.colors.length );
       this.setState({
-        currentAuthor: this.state.quotes.data[random].quoteAuthor,
-        currentQuote: this.state.quotes.data[random].quoteText
+        currentAuthor: this.state.quotes.data[randomQ].quoteAuthor,
+        currentQuote: this.state.quotes.data[randomQ].quoteText,
+        currentColor: this.state.colors[randomC]
       });
     }
   }
@@ -47,6 +52,7 @@ class App extends Component {
 
   render() {
     let twitterUrl = "https://twitter.com/intent/tweet?text=" + escape( `"${this.state.currentQuote}"\n\t- ${this.state.currentAuthor}`);
+    let color = this.state.currentColor;
     if (this.state.quotes.error) {
       return (
         <div id="error">An error occured.</div>
@@ -56,23 +62,20 @@ class App extends Component {
         <div id="loading">Loading ...</div>
       )
     }
+    let classes = `flex justify-center items-center h-screen w-full bg-${color}-dark text-${color}-darkest`;
     return (
-      <main>
-        <Helmet>
-          <script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" />
-        </Helmet>
-        <div id="quote-box">
-          <div className="row">
-            <div id="text">{this.state.currentQuote}</div>
-          </div>
-          <div className="row">
-            <div id="author">{this.state.currentAuthor}</div>
-          </div>
-          <div className="row">
-            <a id="tweet-quote" href={twitterUrl} className="left button"><i className="fa fa-twitter"></i></a>
-            <button className="right" onClick={this.getRandomQuote} id="new-quote">New Quote</button>
-          </div>
-        </div>
+      <main className={classes}>
+        <QuoteBox color={color}>
+            <Quote quote={this.state.currentQuote} author={this.state.currentAuthor} />
+            <div className="mt-4">
+              <Button className="float-left" color={color} id="tweet-quote" href={twitterUrl}>
+                <i className="fa fa-twitter"></i>
+              </Button>
+              <Button className="float-right" color={color} onClick={this.getRandomQuote} id="new-quote">
+                <span>New Quote</span>
+              </Button>
+            </div>
+        </QuoteBox>
       </main>
 
     );
