@@ -28,19 +28,19 @@ self.__precacheManifest = [
     "url": "/fcc-random-quote-machine/static/media/fontawesome-webfont.fee66e71.woff"
   },
   {
-    "revision": "b06871f281fee6b241d60582ae9369b9",
-    "url": "/fcc-random-quote-machine/static/media/fontawesome-webfont.b06871f2.ttf"
-  },
-  {
     "revision": "674f50d287a8c48dc19ba404d20fe713",
     "url": "/fcc-random-quote-machine/static/media/fontawesome-webfont.674f50d2.eot"
+  },
+  {
+    "revision": "b06871f281fee6b241d60582ae9369b9",
+    "url": "/fcc-random-quote-machine/static/media/fontawesome-webfont.b06871f2.ttf"
   },
   {
     "revision": "14c4a6773fddab630c8f",
     "url": "/fcc-random-quote-machine/static/css/2.0d467170.chunk.css"
   },
   {
-    "revision": "07c2cda3be3c13d60b9edbfe53a147f4",
+    "revision": "dd07f687d8afe1290901569accc2a0ef",
     "url": "/fcc-random-quote-machine/index.html"
   }
 ];
