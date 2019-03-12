@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/fcc-random-quote-machine/static/media/fontawesome-webfont.af7ae505.woff2"
   },
   {
-    "revision": "c547b50717a94a6fc266",
-    "url": "/fcc-random-quote-machine/static/css/main.426ddf5e.chunk.css"
+    "revision": "7c0b6acd88a1f603167b",
+    "url": "/fcc-random-quote-machine/static/css/main.e01f1f5d.chunk.css"
   },
   {
     "revision": "41426a8a6f6aff379df0",
@@ -16,12 +16,12 @@ self.__precacheManifest = [
     "url": "/fcc-random-quote-machine/static/media/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "d86be43a546e0010bbe1",
-    "url": "/fcc-random-quote-machine/static/js/2.cf31e92d.chunk.js"
+    "revision": "14c4a6773fddab630c8f",
+    "url": "/fcc-random-quote-machine/static/js/2.5b013517.chunk.js"
   },
   {
-    "revision": "c547b50717a94a6fc266",
-    "url": "/fcc-random-quote-machine/static/js/main.f51f7537.chunk.js"
+    "revision": "7c0b6acd88a1f603167b",
+    "url": "/fcc-random-quote-machine/static/js/main.aca22add.chunk.js"
   },
   {
     "revision": "fee66e712a8a08eef5805a46892932ad",
@@ -36,11 +36,11 @@ self.__precacheManifest = [
     "url": "/fcc-random-quote-machine/static/media/fontawesome-webfont.674f50d2.eot"
   },
   {
-    "revision": "d86be43a546e0010bbe1",
+    "revision": "14c4a6773fddab630c8f",
     "url": "/fcc-random-quote-machine/static/css/2.0d467170.chunk.css"
   },
   {
-    "revision": "e65b321abdbb182dbd82b3affa7b7c56",
+    "revision": "524fa7821c6aa43b1de21cde5639d732",
     "url": "/fcc-random-quote-machine/index.html"
   }
 ];
